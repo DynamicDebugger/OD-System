@@ -1,0 +1,85 @@
+.addStudentContainer {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.addStudentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.addStudentForm .formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addStudentForm .formGroup label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.addStudentForm .formGroup input,
+.addStudentForm .formGroup .radioGroup input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addStudentForm .formGroup .radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures radio buttons wrap on smaller screens */
+    gap: 10px;
+}
+
+.addStudentForm .formGroup .radioGroup label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.addStudentForm .submitButton {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.addStudentForm .submitButton:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .addStudentContainer {
+        padding: 15px;
+    }
+
+    .addStudentForm .formGroup {
+        margin-bottom: 15px;
+    }
+
+    .addStudentForm .submitButton {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .addStudentForm .formGroup .radioGroup {
+        flex-direction: column;
+        /* Change to column layout for radio buttons */
+        gap: 8px;
+        /* Reduce gap between radio options */
+    }
+}

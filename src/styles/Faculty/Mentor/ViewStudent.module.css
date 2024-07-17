@@ -1,0 +1,136 @@
+.form-container {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.top-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #333;
+}
+
+.search-input {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+.export-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.export-button button {
+    padding: 8px 16px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.student-table-wrapper {
+    overflow-y: auto;
+    max-height: 400px;
+    margin-top: 10px;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.student-table th,
+.student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.student-table th {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status.ongoing {
+    background-color: #27ae60;
+}
+
+.status.completed {
+    background-color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .top-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        margin-bottom: 10px;
+    }
+
+    .export-button {
+        justify-content: flex-end;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .student-table {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .export-button button {
+        padding: 8px 12px;
+    }
+
+    .student-table-wrapper {
+        max-height: 300px;
+    }
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-size: 16px;
+}

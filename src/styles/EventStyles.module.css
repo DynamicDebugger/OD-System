@@ -1,0 +1,313 @@
+/* EventStyles.module.css */
+
+.eventsList {
+    justify-content: center;
+    margin: auto;
+    overflow: auto;
+    width: 90%;
+}
+
+.event {
+    background-color: #3a414a;
+    border: 0;
+    border-radius: 20px;
+    /* More rounded corners */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+    /* Deeper shadow */
+    height: auto;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 10px;
+    /* Increased padding for better spacing */
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 90%;
+}
+
+.eventHeader {
+    display: flex;
+    align-items: center;
+    margin: auto 0.5rem;
+    padding: 0.5rem;
+}
+
+.eventDate {
+    background-color: #21262d;
+    border: 2px solid #831238;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(243, 33, 65, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    height: 80px;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    width: 80px;
+}
+
+.eventDate .month {
+    font-size: 14px;
+}
+
+.eventDate .day {
+    font-size: 24px;
+}
+
+.eventBrief {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem;
+    min-height: 80px;
+    padding: 0 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.eventBrief h3 {
+    margin: 0;
+    background-color: #21262d;
+    border: 2px solid #831238;    /* Solid red border */
+    box-shadow: 0 0 10px rgba(243, 33, 65, 0.6);
+    /* Glow effect */
+    text-align: center;
+    font-weight: 600;
+    border-radius: 16px;
+    /* Increased font weight */
+    padding: 10px;
+    /* Padding for better spacing */
+}
+
+.timeplace {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 8px;
+}
+
+.timeplace p {
+    background-color: #21262d;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+.expandButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.expandButtonIcon {
+    background-color: #21262d;
+    /* border: 2px solid #f00; */
+    /* Solid red border */
+    border-radius: 50%;
+    color: #ffa611;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* More pronounced shadow */
+}
+
+.expandIcon {
+    transition: transform 0.5s;
+}
+
+.expandIcon.closed {
+    transform: rotate(0deg);
+}
+
+.expandIcon.open {
+    transform: rotate(180deg);
+}
+
+.eventExpand {
+    background-color: #21262d;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+    transition: all 0.5s;
+    max-height: 0;
+    padding: 0 1.5rem;
+}
+
+.eventExpand.expanded {
+    max-height: 800px;
+    padding: 1.5rem;
+}
+
+.posterList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.posterImg {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    height: 10vw;
+    margin: 10px;
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: cover;
+    width: 10vw;
+}
+
+.paginationBox {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.paginationUl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paginationLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    margin: 0 3px;
+    color: rgba(0, 0, 0, 0.87);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.paginationLink:hover {
+    background-color: #f5f5f5;
+}
+
+.paginationLink.Mui-selected {
+    color: #fff;
+    background-color: #1976d2;
+}
+
+.paginationDisabled {
+    color: rgba(0, 0, 0, 0.38);
+    cursor: default;
+}
+
+@media only screen and (max-width: 640px) {
+    .event {
+        display: flex;
+        flex-direction: column;
+    }
+    .timeplace{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .eventHeader {
+        display: flex;
+        flex-direction: column;
+        margin: auto 0.5rem;
+        padding: 0.5rem;
+    }
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupContent {
+    background-color: #fff;
+    color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popupButtons {
+    margin-top: 20px;
+}
+
+.confirmButton,
+.cancelButton {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.confirmButton {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancelButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.confirmButton:hover,
+.cancelButton:hover {
+    opacity: 0.8;
+}
+.certificateContainer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.certificateContainer a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1976d2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.certificateContainer a:hover {
+    background-color: #1565c0;
+}

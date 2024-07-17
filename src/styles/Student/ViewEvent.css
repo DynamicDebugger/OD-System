@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #831238;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header .menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .menu a:hover {
+    text-decoration: underline;
+}
+
+.header .icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+.upcoming-events {
+    background-color: #831238;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table .enroll {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table .enroll:hover {
+    background-color: #5aa456;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.footer button:hover {
+    background-color: #d32f2f;
+}
+
+.footer .icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.footer .success {
+    display: flex;
+    align-items: center;
+}
+
+.footer .success img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-container {
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.image-container.show {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.image-container img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+.image-container .enroll {
+    display: block;
+    margin: 10px auto;
+}

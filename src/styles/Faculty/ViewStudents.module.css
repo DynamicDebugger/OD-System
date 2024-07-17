@@ -1,0 +1,158 @@
+.studentTableContainer {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.searchAndFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+.searchIcon {
+    font-size: 18px;
+    color: #333;
+}
+
+.searchBar input {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.dropdown select {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.exportButton {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+.exportButton button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.studentTableWrapper {
+    overflow-y: auto;
+    max-height: 400px;
+    /* Adjust this value as needed */
+}
+
+.studentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.studentTable th,
+.studentTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.studentTable th {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status.pending {
+    background-color: #e74c3c;
+}
+
+.status.ongoing {
+    background-color: #27ae60;
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchAndFilter {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exportButton {
+        justify-content: center;
+    }
+
+    .tabs,
+    .tab,
+    .viewDetailsButton {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .studentTableWrapper {
+        max-height: 300px;
+        /* Adjust this value as needed */
+    }
+}
+
+.searchBar input::placeholder {
+    color: #999;
+    font-size: 16px;
+}

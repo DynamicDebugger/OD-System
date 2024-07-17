@@ -1,0 +1,224 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/src/assets/sathyabama-arch.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 30px 60px;
+    /* Extra padding to accommodate wave */
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    /* Increased width */
+    box-sizing: border-box;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+    position: relative;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    /* To keep the wave inside */
+    z-index: 1;
+    /* Ensure card is above particles */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    /* Slight zoom and brightness effect on hover */
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    animation: fadeIn 1.2s ease-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    z-index: 2;
+    /* Ensure form fields are above the wave */
+    position: relative;
+    animation: fadeIn 1.4s ease-out;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: #444;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px;
+    /* Increased padding */
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    /* Changed background color for better visibility */
+    position: relative;
+    z-index: 2;
+    /* Ensure form fields are above the wave */
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    /* Increased padding */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    animation: fadeIn 1.6s ease-out;
+    position: relative;
+    z-index: 2;
+    /* Ensure button is above the wave */
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #ff6f61, #fc8eac);
+    transform: scale(1.05);
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* Occupy lower half */
+    pointer-events: none;
+    /* Ensure the wave doesn't affect form interactions */
+    z-index: 1;
+    /* Ensure the wave is behind form fields */
+    animation: waveAnimation 10s infinite linear;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .login-card {
+        padding: 30px 20px 50px;
+    }
+
+    .login-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    input,
+    select {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+}

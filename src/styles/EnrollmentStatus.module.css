@@ -1,0 +1,44 @@
+.statusContainer {
+    max-width: 600px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 16px;
+    margin-top: 1em;
+    padding: 4px;
+    color: #ffffff;
+    /* Default text color for all statuses */
+}
+
+/* Specific styles for different statuses */
+.approved {
+    background-color: #28a745;
+    border: 2px solid #218838;
+    box-shadow: 0 0 10px rgba(33, 136, 56, 0.6);
+}
+
+.declined {
+    background-color: #dc3545;
+    border: 2px solid #c82333;
+    box-shadow: 0 0 10px rgba(200, 35, 51, 0.6);
+}
+
+.waiting {
+    background-color: #ffc107;
+    border: 2px solid #e0a800;
+    box-shadow: 0 0 10px rgba(224, 168, 0, 0.6);
+}
+
+.statusText {
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .statusContainer {
+        padding: 8px;
+        margin: 15px auto;
+    }
+
+    .statusText {
+        font-size: 16px;
+    }
+}

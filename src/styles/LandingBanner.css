@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --main-color: #831238;
+    --accent-color: #6f0c2b;
+    --nav-bg-color: #FFFFFF;
+    --option-bg-color: #FAFAFA;
+    --text-color: #333333;
+    --light-text-color: #777777;
+    --background-color: #F0F2F5;
+    --card-background: #FFFFFF;
+    --dark-bg-color: #1E1E1E;
+    --dark-card-background: #2C2C2C;
+    --dark-text-color: #FFFFFF;
+    --dark-light-text-color: #AAAAAA;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.fullscreen-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.header {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+}
+
+.banner-logo {
+    height: 10vh;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bell-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: var(--option-bg-color);
+    color: var(--text-color);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.main-content {
+    padding-top: 15vh;
+    width: 100%;
+    height: calc(100vh - 15vh);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    overflow: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        height: 10vh;
+        padding: 10px 20px;
+    }
+
+    .banner-logo {
+        height: 8vh;
+    }
+
+    .main-content {
+        padding-top: 10vh;
+        height: calc(100vh - 10vh);
+    }
+}

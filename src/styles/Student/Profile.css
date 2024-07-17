@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --main-color: #831238;
+    --accent-color: #6f0c2b;
+    --nav-bg-color: #FFFFFF;
+    --option-bg-color: #FAFAFA;
+    --text-color: #333333;
+    --light-text-color: #777777;
+    --background-color: #F0F2F5;
+    --card-background: #FFFFFF;
+    --dark-bg-color: #1E1E1E;
+    --dark-card-background: #2C2C2C;
+    --dark-text-color: #FFFFFF;
+    --dark-light-text-color: #AAAAAA;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.profile-icon {
+    color: #333;
+    margin-bottom: 10px;
+}
+.profile-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-background);
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background: var(--main-color);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s, color 0.3s;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+}
+
+.banner-logo {
+    height: 10vh;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.bell-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--option-bg-color);
+    color: var(--text-color);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 15vh);
+    margin-top: 15vh;
+    padding: 20px;
+}
+
+.profile-content {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.profile-card {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.profile-details,
+.profile-back {
+    backface-visibility: hidden;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h2 {
+    font-size: 22px;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    color: var(--light-text-color);
+}
+
+.profile-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.field-label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.field-value {
+    color: var(--light-text-color);
+}
+
+.profile-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ar-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.ar-button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.profile-options {
+    flex: 1;
+    background-color: var(--nav-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.option-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s;
+}
+
+.option-button:hover {
+    background: var(--main-color);
+    transform: scale(1.1);
+}
+
+.option-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Resetting some styles for smaller devices */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Ensure at least viewport height */
+    }
+
+    .profile-main {
+        display: block;
+        /* Take remaining height */
+        overflow-y: auto;
+        /* Enable vertical scrolling for entire screen */
+        padding: 10px;
+    }
+
+    .profile-options {
+        padding: 10px;
+    }
+
+    .option-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .profile-content {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+
+    .profile-card .profile-fields {
+        max-height: unset;
+        /* Reset max-height to allow full content display */
+        overflow-y: unset;
+        /* Reset overflow */
+    }
+}
